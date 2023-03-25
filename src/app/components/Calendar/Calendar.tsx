@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Modal from '../Modal';
+import TaskForm from '../TaskForm';
 import './Calendar.scss';
 
 const Calendar = () => {
@@ -109,7 +110,11 @@ const Calendar = () => {
         </div>
         <div className="calendar__days">{renderCalendar()}</div>
       </div>
-      {showPopup && <Modal setShowPopup={setShowPopup} />}
+      {showPopup && (
+        <Modal setShowPopup={setShowPopup}>
+          <TaskForm />
+        </Modal>
+      )}
     </>
   );
 };
