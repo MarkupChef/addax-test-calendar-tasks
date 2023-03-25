@@ -70,3 +70,13 @@
   opacity: 0.5;
   cursor: default;
 }
+
+.day {
+  position: relative;
+
+  &__btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
